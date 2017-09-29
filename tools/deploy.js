@@ -16,9 +16,9 @@ import run from './run';
 // GitHub Pages
 const remote = {
   name: 'github',
-  url: 'https://github.com/<user>/<repo>.git',
+  url: 'https://github.com/dlemvigh/ironman-react-starter-kit.git',
   branch: 'gh-pages',
-  website: 'https://<user>.github.io/<repo>/',
+  website: 'https://dlemvigh.github.io/ironman-react-starter-kit/',
   static: true,
 };
 
