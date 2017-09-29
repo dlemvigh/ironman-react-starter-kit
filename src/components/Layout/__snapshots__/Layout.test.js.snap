@@ -14,13 +14,6 @@ exports[`Layout renders children correctly 1`] = `
       >
         <a
           className="link"
-          href="/about"
-          onClick={[Function]}
-        >
-          About
-        </a>
-        <a
-          className="link"
           href="/contact"
           onClick={[Function]}
         >
@@ -153,13 +146,6 @@ exports[`Layout renders children correctly 1`] = `
       >
         ·
       </span>
-      <a
-        className="link"
-        href="/privacy"
-        onClick={[Function]}
-      >
-        Privacy
-      </a>
       <span
         className="spacer"
       >
