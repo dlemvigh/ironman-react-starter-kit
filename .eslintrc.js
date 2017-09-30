@@ -69,6 +69,8 @@ module.exports = {
         trailingComma: 'all',
       },
     ],
+
+    'linebreak-style': 'off'
   },
 
   settings: {
