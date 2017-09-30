@@ -8,18 +8,51 @@
  */
 
 import {
-  GraphQLObjectType as ObjectType,
-  GraphQLID as ID,
-  GraphQLString as StringType,
-  GraphQLNonNull as NonNull,
+  GraphQLObjectType,
+  GraphQLList,
+  GraphQLID,
+  GraphQLBoolean,
+  GraphQLString,
+  GraphQLNonNull,
 } from 'graphql';
 
-const UserType = new ObjectType({
+import ActivityType from './ActivityType';
+
+const UserType = new GraphQLObjectType({
   name: 'User',
-  fields: {
-    id: { type: new NonNull(ID) },
-    email: { type: StringType },
-  },
+  fields: () => ({
+    id: { type: new GraphQLNonNull(GraphQLID) },
+    email: { type: GraphQLString },
+    name: {
+      type: GraphQLString,
+    },
+    username: {
+      type: GraphQLString,
+    },
+    active: {
+      type: GraphQLBoolean,
+    },
+    activities: {
+      type: new GraphQLList(ActivityType),
+      resolve() {},
+    },
+    // summary: {
+    //   type: summaryType,
+    //   args: {
+    //     week: {
+    //       name: "week",
+    //       type: GraphQLInt
+    //     },
+    //     year: {
+    //       name: "year",
+    //       type: GraphQLInt
+    //     }
+    //   },
+    //   resolve: (root, args) => {
+    //     return database.getWeekSummary(root._id, args.week, args.year);
+    //   }
+    // },
+  }),
 });
 
 export default UserType;

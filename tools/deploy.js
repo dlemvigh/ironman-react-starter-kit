@@ -14,21 +14,21 @@ import { makeDir, moveDir, cleanDir } from './lib/fs';
 import run from './run';
 
 // GitHub Pages
-const remote = {
-  name: 'github',
-  url: 'https://github.com/dlemvigh/ironman-react-starter-kit.git',
-  branch: 'gh-pages',
-  website: 'https://dlemvigh.github.io/ironman-react-starter-kit/',
-  static: true,
-};
+// const remote = {
+//   name: 'github',
+//   url: 'https://github.com/dlemvigh/ironman-react-starter-kit.git',
+//   branch: 'gh-pages',
+//   website: 'https://dlemvigh.github.io/ironman-react-starter-kit/',
+//   static: true,
+// };
 
 // Heroku
-// const remote = {
-//   name: 'heroku',
-//   url: 'https://git.heroku.com/<app>.git',
-//   branch: 'master',
-//   website: 'https://<app>.herokuapp.com',
-// };
+const remote = {
+  name: 'heroku',
+  url: 'https://git.heroku.com/ironman-club.git',
+  branch: 'master',
+  website: 'https://ironman-club.herokuapp.com',
+};
 
 // Azure Web Apps
 // const remote = {

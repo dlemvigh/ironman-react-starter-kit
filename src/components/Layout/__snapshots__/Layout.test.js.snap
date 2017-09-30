@@ -59,7 +59,7 @@ exports[`Layout renders children correctly 1`] = `
         <span
           className="brandTxt"
         >
-          Your Company
+          Ironman Club
         </span>
       </a>
       <div
