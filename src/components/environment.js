@@ -1,14 +1,16 @@
 import fetch from 'isomorphic-fetch';
 import { Environment, Network, RecordSource, Store } from 'relay-runtime';
 
-function fetchQuery(operation) {
+function fetchQuery(operation, variables) {
   return fetch('/graphql', {
     method: 'POST',
     headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/graphql',
+      'Content-Type': 'application/json',
     },
-    body: operation.text,
+    body: JSON.stringify({
+      query: operation.text,
+      variables,
+    }),
   }).then(response => response.json());
 }
 

@@ -51,6 +51,8 @@ module.exports = {
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/issues/308#issuecomment-322954274
     'jsx-a11y/label-has-for': 'warn',
 
+    'react/forbid-prop-types': 'off',
+
     // Allow js files to use jsx syntax, too
     'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
 
@@ -70,7 +72,7 @@ module.exports = {
       },
     ],
 
-    'linebreak-style': 'off'
+    'linebreak-style': 'off',
   },
 
   settings: {

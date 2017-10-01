@@ -1,0 +1,47 @@
+type Activity {
+  discipline: Discipline
+  disciplineId: ID
+  disciplineName: String
+  distance: Float
+  unit: String
+  score: Float
+  date: String
+  week: Int
+  year: Int
+  user: User
+  userId: ID
+  userName: String
+}
+
+type Discipline {
+  _id: ID!
+  id: ID!
+  name: String
+  score: Float
+  unit: String
+  activities: [Activity]
+}
+
+type NewsItem {
+  title: String!
+  link: String!
+  author: String
+  pubDate: String!
+  content: String
+}
+
+type Query {
+  me: User
+  news: [NewsItem]
+  activity: Activity
+  disciplines: [Discipline]
+}
+
+type User {
+  id: ID!
+  email: String
+  name: String
+  username: String
+  active: Boolean
+  activities: [Activity]
+}
